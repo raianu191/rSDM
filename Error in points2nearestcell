@@ -1,0 +1,11 @@
+I wanted to move the coordinates to the nearest non-NA raster value and using points2nearestcell I am getting this error: 
+Error in class::knn1(coord.ras, coord.miss, cell.id) : 
+  'train' and 'class' have different lengths
+In addition: Warning message:
+In seq_len(coord.ras) :
+
+Apart from this error I have two other questions:
+
+I am doing the SDM of an aquatic species and the rasters have been clipped from rivernetwork shapefile. The raster has a 1km*1km resolution. However, if I use a basin shapefile I get the message of "All points fall within a raster cell" which is true. Hence, (Question 1) does the raster file has something to do about this error? Also for the locs I have used the SpatialPoints function so that the CRS of both the raster and vector are same. The original location file has a longitude and latitude information.
+
+(Question 2) Finally is moving the location a valid solution? The error of my points not falling in the raster cells would have arose because either the river network delineation was faulty at times or the coordinates were taken from river banks. Any help would be highly appreciated. 
